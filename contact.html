@@ -27,13 +27,13 @@
   </section>
   <section class="content-card">
     <h2>Preorder and Inquiry Form</h2>
-    <form action="#" method="get">
+    <form id="preorder-form" action="#" method="get" novalidate>
       <fieldset>
         <legend>Your Contact Information</legend>
         <p><label for="customer-name">Full name</label><br>
-        <input id="customer-name" name="customer_name" type="text" required minlength="2" autocomplete="name"></p>
+        <input id="customer-name" name="customer_name" type="text" required minlength="2" autocomplete="name" aria-describedby="customer-name-error"><span class="field-error" id="customer-name-error" aria-live="polite"></span></p>
         <p><label for="customer-email">Email address</label><br>
-        <input id="customer-email" name="customer_email" type="email" required autocomplete="email"></p>
+        <input id="customer-email" name="customer_email" type="email" required autocomplete="email" aria-describedby="customer-email-error"><span class="field-error" id="customer-email-error" aria-live="polite"></span></p>
       </fieldset>
       <fieldset>
         <legend>Order or Question Details</legend>
@@ -42,15 +42,16 @@
           <option value="">Choose one</option>
           <option value="preorder">Preorder request</option>
           <option value="question">General question</option>
-        </select></p>
+        </select><span class="field-error" id="request-type-error" aria-live="polite"></span></p>
         <p><label for="pickup-date">Preferred pickup date (for preorders)</label><br>
-        <input id="pickup-date" name="pickup_date" type="date"></p>
+        <input id="pickup-date" name="pickup_date" type="date"><span class="field-error" id="pickup-date-error" aria-live="polite"></span></p>
         <p><label for="item-details">Item details or question</label><br>
-        <textarea id="item-details" name="item_details" rows="5" cols="40" required minlength="10"></textarea></p>
+        <textarea id="item-details" name="item_details" rows="5" cols="40" required minlength="10"></textarea><span class="field-error" id="item-details-error" aria-live="polite"></span></p>
         <p><label for="allergy-notes">Allergy notes (if applicable)</label><br>
         <textarea id="allergy-notes" name="allergy_notes" rows="3" cols="40"></textarea></p>
       </fieldset>
       <button type="submit">Review Request</button>
+      <p id="form-status" class="feedback" role="status" aria-live="polite"></p>
     </form>
     <p><strong>Note:</strong> This classroom demonstration form does not send requests to the bakery. Please contact the bakery directly to confirm any order.</p>
   </section>
@@ -58,5 +59,6 @@
 <footer class="site-footer">
   <p>&copy; 2026 North Star Bakery. Baked with care for our neighbors.</p>
 </footer>
+<script src="script.js" defer></script>
 </body>
 </html>

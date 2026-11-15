@@ -21,6 +21,13 @@
 <main class="container">
   <h1>Our Breads, Pastries, and Cakes</h1>
   <p>These are sample price ranges; please contact us for current availability and exact prices.</p>
+  <section class="content-card favorites-panel" aria-labelledby="favorites-heading">
+    <h2 id="favorites-heading">Save Your Bakery Favorites</h2>
+    <p>Choose the treats you like. Your selections will be remembered on this device.</p>
+    <div id="favorite-products" class="favorites-list"></div>
+    <p id="favorites-summary" class="feedback" aria-live="polite"></p>
+    <button type="button" id="clear-favorites">Clear favorites</button>
+  </section>
   <section class="content-card">
     <h2>Fresh Breads</h2>
     <p>Everyday loaves and hearty specialty breads: approximately $5–$12 per loaf.</p>
@@ -43,5 +50,6 @@
 <footer class="site-footer">
   <p>&copy; 2026 North Star Bakery. Baked with care for our neighbors.</p>
 </footer>
+<script src="script.js" defer></script>
 </body>
 </html>
